@@ -1,0 +1,11 @@
+.item-info {
+	min-width: 300px;
+}
+
+img {
+	max-width: 260px;
+}
+
+.item-amount {
+	width: 60px;
+}

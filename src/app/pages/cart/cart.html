@@ -1,0 +1,27 @@
+<div class="container-fluid my-5">
+	<div class="row gy-4">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body p-3">
+					@if (items.length < 1) { <div class="text-center text-muted py-3">
+						Your cart is empty.
+				</div>
+				}
+				@else {
+				<div class="list-group p-2">
+					@for (item of items; track $index) {
+					<app-cart-item [item]="item" (removeItem)="removeItem($event)" (updateQuantity)="updateQuantity($event)"></app-cart-item>
+					}
+				</div>
+				}
+			</div>
+			<div class="card-footer">
+				<span class="fw-bold">Total:</span>
+				<span class="h5 text-primary ms-1">${{ total.toFixed(2) }}</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<app-payment-form [total]="total" (pay)="pay()"></app-payment-form>
+	</div>
+</div>

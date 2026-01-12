@@ -1,0 +1,10 @@
+<div class="card text-center h-100 mx-auto">
+	<img class="card-img-top" [src]="product.url" [alt]="product.name" [routerLink]="`product/${product.id}`">
+	<div class="card-footer">
+		<h5 class="card-title mb-2">{{ product.name }} • <span class="fw-bold">${{ product.price }}</span></h5>
+		<form #form="ngForm" (ngSubmit)="submitForm()" class="d-flex gap-2">
+			<input class="btn btn-primary w-100" type="submit" value="Add to cart" [disabled]="form.invalid">
+			<input class="form-control" type="number" required min="1" max="99" [(ngModel)]="quantity" name="quantity">
+		</form>
+	</div>
+</div>

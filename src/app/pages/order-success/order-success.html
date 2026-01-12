@@ -1,0 +1,28 @@
+<div id="order-card" class="d-flex justify-content-center align-items-center">
+	<div class="card shadow p-4">
+		<div class="text-center mb-2">
+			<h2 class="text-success fw-bold mt-3">Order Successful!</h2>
+			<p class="text-muted">Thank you for your purchase. Your order has been placed successfully.</p>
+		</div>
+		<div class="card p-3 mb-4">
+			<h5 class="text-primary mb-3">Order Details</h5>
+			<ul class="p-0 m-0">
+				<li class="d-flex justify-content-between border-bottom pb-1">
+					<span>ETA:</span>
+					<strong>3-5 Business Days</strong>
+				</li>
+				<li class="d-flex justify-content-between py-1">
+					<span>Total Items:</span>
+					<strong>{{ itemCount }}</strong>
+				</li>
+				<li class="d-flex justify-content-between border-top pt-1">
+					<span>Total Price:</span>
+					<strong class="text-primary">${{ total.toFixed(2) }}</strong>
+				</li>
+			</ul>
+		</div>
+		<div class="text-center">
+			<button class="btn btn-primary" routerLink="/">Back to Products List</button>
+		</div>
+	</div>
+</div>

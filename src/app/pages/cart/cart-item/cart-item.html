@@ -1,0 +1,17 @@
+<div class="list-group-item d-flex justify-content-center py-3 p-0 row">
+	<div class="d-flex flex-column col-auto">
+		<img class="rounded-2 border" [src]="item.product.url" [alt]="item.product.name" />
+	</div>
+	<div class="d-flex flex-column col mt-3">
+		<div class="item-info d-flex justify-content-between">
+			<div class="h4"><strong>{{ item.product.name }}</strong></div>
+			<button (click)="clickRemove()" class="btn btn-sm btn-outline-danger">Remove</button>
+		</div>
+		<div class="fw-bold text-primary">${{ item.product.price }}</div>
+		<div class="d-flex gap-2 mt-auto">
+			<span class="fw-semibold h5">Amount:</span>
+			<input class="item-amount form-control form-control-sm" required min="1" max="99" type="number"
+				name="amount" [(ngModel)]="item.quantity" (ngModelChange)="changeAmount($event)">
+		</div>
+	</div>
+</div>

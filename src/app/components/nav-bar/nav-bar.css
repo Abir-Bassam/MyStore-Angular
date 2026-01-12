@@ -1,0 +1,23 @@
+#logo {
+	color: white;
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+img {
+	filter: invert(100%);
+}
+.navbar {
+  background-color: #438fc1 !important; 
+  color: white;
+}
+
+.navbar-brand,
+.nav-links a {
+  color: white !important;
+}
+
+.navbar-brand:hover,
+.nav-links a:hover {
+  opacity: 0.7;
+}
