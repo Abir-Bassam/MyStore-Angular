@@ -1,5 +1,3 @@
----
-
 # MyStore – Angular E-commerce Frontend
 
 This is a clean, responsive e-commerce frontend built with **Angular** and **TypeScript** as my final project for the Full Stack JavaScript Developer Nanodegree. It simulates a real online store where users can browse products, add them to a cart, and complete checkout — all in a single-page application.
